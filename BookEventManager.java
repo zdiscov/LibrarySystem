@@ -34,9 +34,9 @@ public Set<Book> getAllBooksCheckedOut()
 	return this.bookEventManagerMap.keySet();		
 }
 
-public Set<Book> getBooksDueForUser(User user)
+public HashSet<Book> getBooksDueForUser(User user)
 {
-	
+	return new HashSet<Book>();
 }
 
 }

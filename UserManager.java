@@ -6,6 +6,7 @@ import java.util.HashMap;
 public class UserManager {
 HashMap<User,Set<Book>> userManagerBookMap;
 
+/*
 public Book getBookForAnUser(User user)
 {
 }
@@ -13,7 +14,7 @@ public Book getBookForAnUser(User user)
 public Set<Book> getAllBooksForAnUser(User user){
 	
 }
-
+*/
 /**
  * 
  * @param user

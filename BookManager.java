@@ -65,22 +65,25 @@ public Set<Book> getBooksSetFromUsers()
 	}
 	return booksWithUserMap.keySet();
 }
-
+/*
 public Long getUniversalBookCount()
 {
+	return null;
 	//To be implemented by Yasmine
 	
 }
 
 public Long getBooksCountAcrossAllUsers()
 {
+	return null;
 	//To be implemented by Yasmine
 }
 
 public Long getBooksCountNotAssociatedWithUsers()
 {
+	return null;
 	//To be implemented by Yasmine
 }
 
-
+*/
 }

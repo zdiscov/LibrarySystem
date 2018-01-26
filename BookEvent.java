@@ -10,9 +10,9 @@ import org.joda.time.DateTime;
  */
 public class BookEvent {
 int NO_OF_DAYS = 30;
-DateTime eventDateTime;
+DateTime eventDateTime = null;
 DateTime dueDate;
-Boolean isOverDue;
+Boolean isOverDue = false;
 EventType eventType;
 
 /**
@@ -32,25 +32,50 @@ public EventType getEventType() {
 
 public void setBookEvent(Book book, EventType eventType)
 {
-	eventDateTime = DateTime.now();
+	this.eventDateTime = DateTime.now();
+	this.dueDate = eventDateTime.plusDays(NO_OF_DAYS);
 	this.eventType = eventType;
 }
 
 public void setBookEvent(Book book, EventType eventType, DateTime dueDate)
 {
-	eventDateTime = DateTime.now();
+	this.eventDateTime = DateTime.now();
 	this.eventType = eventType;
 	this.dueDate = dueDate;
 }
 
 public Boolean isOverdue()
 {
-	DateTime dateTime = new DateTime();
+	if(eventDateTime == null)
+		return false;
 	if(this.eventType.equals(EventType.CHECKOUT)){
 		if(this.dueDate.isBefore(eventDateTime.plusDays(NO_OF_DAYS))){
 			isOverDue = true;
 		}
 	}
+	return isOverDue;
 	
 
+}
+
+/**
+ * @return the dueDate
+ */
+public DateTime getDueDate() {
+	return dueDate;
+}
+
+/**
+ * @param dueDate the dueDate to set
+ */
+public void setDueDate(DateTime dueDate) {
+	this.dueDate = dueDate;
+}
+
+/**
+ * @param eventDateTime the eventDateTime to set
+ */
+public void setEventDateTime(DateTime eventDateTime) {
+	this.eventDateTime = eventDateTime;
+}
 }
