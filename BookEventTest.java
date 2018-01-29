@@ -50,6 +50,7 @@ public class BookEventTest {
 		bookEvent.setBookEvent(book, EventType.CHECKOUT);
 		assertFalse(bookEvent.isOverdue());
 		
+		
 	}
 
 	
